@@ -1,0 +1,141 @@
+#keyboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 290px;
+    width:900px;
+    border: 2px solid greenyellow;
+    margin: 0 auto;
+}
+    .active{
+        background-color:rgb(240, 140, 227);
+        transition-duration: .3s;
+    }
+
+
+
+.keys{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+    
+}
+
+
+.keys:hover{
+    background-color: lightgoldenrodyellow;
+    
+}
+
+.backspace{
+    width: 120px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.backspace:hover{
+    background: lightgoldenrodyellow;
+}
+.tab{
+    width: 62px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.tab:hover{
+    background: lightgoldenrodyellow;
+
+}
+.del{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.del:hover{
+    background: lightgoldenrodyellow;
+
+}
+
+
+
+.caps{
+    width: 114px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.caps:hover{
+    background: lightgoldenrodyellow;
+}
+.shift-l{
+    width: 120px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.shift-l:hover{
+    background: lightgoldenrodyellow;
+}
+.shift-r{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.shift-r:hover{
+    background: lightgoldenrodyellow;
+}
+.enter{
+    width: 114px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.enter:hover{
+    background: lightgoldenrodyellow;
+}
+.up,.left,.down,.right,.alt-l,.alt-r,.win{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+    background-color: rgb(231, 231, 172);
+}
+
+
+.up:hover,.left:hover,.down:hover,.right:hover,.alt-l:hover,.alt-r:hover,.win:hover{
+    background-color: lightgoldenrodyellow;
+    
+}
+.ctrl-l,.ctrl-r{
+    width: 90px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.ctrl-l:hover,.ctrl-r:hover{
+    background: lightgoldenrodyellow;
+}
+.space{
+    width: 330px;
+    height: 50px;
+    border: 1px solid grey;
+    margin: 3px;
+    text-align: center;
+}
+.space:hover{
+    background: lightgoldenrodyellow;
+}
