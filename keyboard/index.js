@@ -18,7 +18,7 @@
     const En_Ru = document.createElement("p");
     cont.appendChild(En_Ru);
     En_Ru.classList.add('EnRu');
-    En_Ru.innerHTML = 'Не хватает времени, пожалуйста оставьте свой дискорд <br> по нажатию работают только цифры и буквы <br>';
+    En_Ru.innerHTML = 'Не хватает времени, пожалуйста оставьте свой дискорд <br> по нажатию и клику работают только цифры и буквы <br>';
 
 
   
@@ -63,14 +63,14 @@ document.querySelector('.keyboard').innerHTML= out+
 }
 rukla();
 
-
+/***************lighting letters and numbers on click from keyboard*********************/
 document.onkeypress = function (event)  {
    // document.addEventListener('keydown', (event) => {
    //console.log(event.charCode);
     console.log(event.keyCode);
-
+    
     document.querySelector('.keys[data="'+ event.keyCode +'"').classList.add('active');
-  
+     
 
 };
 
@@ -79,7 +79,56 @@ document.addEventListener('keyup', (event) => {
     document.querySelectorAll('.keyboard .keys').forEach(function(element){
         element.classList.remove('active')
    
-})})
+})});
+/***************letters and numbers on mouse click*********************/
+document.onclick = function (event)  {
+
+let keys = document.querySelectorAll('.keys');
+let display = document.querySelector('.textarea');
+let clear = document.querySelector('.clear');
+
+for (let key of keys) {
+  key.onmousedown = function () {
+  display.textContent += key.textContent;
+  //key.classList.add('active');
+  }
+}
+}
+
+
+
+
+
+
+
+/*
+key.onmouseup = function () {
+  display.textContent += key.textContent;
+  key.classList.remove('active');}
+
+
+  }
+};
+clear.onclick = function () {
+  display.textContent = '';
+};
+};
+document.addEventListener('onmouseup', (event) => {
+    
+    document.querySelectorAll('.keyboard .keys').forEach(function(element){
+        element.classList.remove('active')
+
+
+    })})
+
+/********************************lighting-on-mouseclick****************************************/
+
+
+
+
+
+
+
 //document.onkeypress = function (event2)  {
  //   document.querySelector('#keyboard .keys[data="'+event.keyCode+'"]').classList.remove('active');
 //
