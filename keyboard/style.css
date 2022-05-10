@@ -52,7 +52,8 @@
 
 
 .keys:hover{
-    background-color: lightgoldenrodyellow;
+    border: 1px solid rgb(201, 8, 8);
+    border-radius: 10%;
     
 }
 
