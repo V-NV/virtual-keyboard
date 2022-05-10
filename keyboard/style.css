@@ -1,4 +1,30 @@
-#keyboard{
+.cont{
+    display: flex;
+    min-width: 1000px;
+    margin: 60px auto 0 auto;
+    flex-direction: column;
+  }
+  textarea {
+    font-size: 24px;
+    width: 700px;
+    height: 140px;
+    
+    margin: 0 auto;
+    outline: none;
+    border: 1px solid greenyellow;
+    background-color: #f3ebeb;
+  }
+  .EnRu {
+    display: flex;
+    color: rgb(51, 21, 21);
+    text-align: center;
+    margin: 0px auto;
+    line-height: 20px;
+    
+    user-select: none;
+  }
+  
+.keyboard{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
