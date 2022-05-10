@@ -18,14 +18,14 @@
     const En_Ru = document.createElement("p");
     cont.appendChild(En_Ru);
     En_Ru.classList.add('EnRu');
-    En_Ru.innerHTML = 'Не хватает времени, пожалуйста оставьте свой дискорд <br> по нажатию работает только верхний ряд кроме Backspace<br>';
+    En_Ru.innerHTML = 'Не хватает времени, пожалуйста оставьте свой дискорд <br> по нажатию работают только цифры и буквы <br>';
 
 
   
 const keyboardRu = [1105, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61,8];
 const keyboardRu2 = [1081,1094, 1091, 1082, 1077, 1085, 1075, 1096, 1097, 1079,1093, 1098,92];
 const keyboardRu3 = [1092, 1099, 1074, 1072, 1087, 1088, 1086,1083, 1076, 1078, 1101]; 
-const keyboardRu4 = [92,1103, 1095, 1089, 1084, 1080, 1090, 1100, 1073,1102,47];
+const keyboardRu4 = [1103, 1095, 1089, 1084, 1080, 1090, 1100, 1073,1102,46];
 
 const keyboardEn = [];
 const keyboardEn2 = [];
@@ -35,7 +35,6 @@ const keyboardEn4 = [];
 
 /*document.onkeypress = function (event)  {
 console.log(event);
-
 keyboard.push(event.charCode);
 console.log(keyboard)
 }*/
@@ -47,13 +46,13 @@ for (let i = 0 ; i< keyboardRu.length;i++){
     out += '<div class="keys" data="'+keyboardRu[i]+'">'+String.fromCharCode(`${keyboardRu[i]}`)+'</div>';
 }};
 for (let i = 0 ; i< keyboardRu2.length;i++){
-    out2 += '<div class="keys data="'+keyboardRu2[i]+'">'+String.fromCharCode(`${keyboardRu2[i]}`)+'</div>';
+    out2 += '<div class="keys" data="'+keyboardRu2[i]+'">'+String.fromCharCode(`${keyboardRu2[i]}`)+'</div>';
 };
 for (let i = 0 ; i< keyboardRu3.length;i++){
-    out3 += '<div class="keys data="'+keyboardRu3[i]+'">'+String.fromCharCode(`${keyboardRu3[i]}`)+'</div>';
+    out3 += '<div class="keys" data="'+keyboardRu3[i]+'">'+String.fromCharCode(`${keyboardRu3[i]}`)+'</div>';
 };
 for (let i = 0 ; i< keyboardRu4.length;i++){
-    out4 += '<div class="keys data="'+keyboardRu4[i]+'">'+String.fromCharCode(`${keyboardRu4[i]}`)+'</div>';
+    out4 += '<div class="keys" data="'+keyboardRu4[i]+'">'+String.fromCharCode(`${keyboardRu4[i]}`)+'</div>';
 };
 document.querySelector('.keyboard').innerHTML= out+
                  '<p class="tab">Tab</p>'+out2+'<p class="del">Del</p>'+
@@ -68,9 +67,9 @@ rukla();
 document.onkeypress = function (event)  {
    // document.addEventListener('keydown', (event) => {
    //console.log(event.charCode);
-    //console.log(event.keyCode);
+    console.log(event.keyCode);
 
-    document.querySelector('.keyboard .keys[data="'+ event.keyCode +'"').classList.add('active');
+    document.querySelector('.keys[data="'+ event.keyCode +'"').classList.add('active');
   
 
 };
@@ -81,7 +80,6 @@ document.addEventListener('keyup', (event) => {
         element.classList.remove('active')
    
 })})
-
 //document.onkeypress = function (event2)  {
  //   document.querySelector('#keyboard .keys[data="'+event.keyCode+'"]').classList.remove('active');
 //

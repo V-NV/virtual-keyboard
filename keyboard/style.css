@@ -72,6 +72,7 @@
     border: 1px solid grey;
     margin: 3px;
     text-align: center;
+    background-color: rgb(247, 247, 139);
 }
 .tab:hover{
     background: lightgoldenrodyellow;
@@ -83,6 +84,7 @@
     border: 1px solid grey;
     margin: 3px;
     text-align: center;
+    background-color: rgb(247, 247, 139);
 }
 .del:hover{
     background: lightgoldenrodyellow;
@@ -97,16 +99,18 @@
     border: 1px solid grey;
     margin: 3px;
     text-align: center;
+    background-color: rgb(247, 247, 139);
 }
 .caps:hover{
     background: lightgoldenrodyellow;
 }
 .shift-l{
-    width: 120px;
+    width: 177px;
     height: 50px;
     border: 1px solid grey;
     margin: 3px;
     text-align: center;
+    background-color: rgb(247, 247, 139);
 }
 .shift-l:hover{
     background: lightgoldenrodyellow;
@@ -117,6 +121,7 @@
     border: 1px solid grey;
     margin: 3px;
     text-align: center;
+    background-color: rgb(247, 247, 139);
 }
 .shift-r:hover{
     background: lightgoldenrodyellow;
@@ -127,6 +132,7 @@
     border: 1px solid grey;
     margin: 3px;
     text-align: center;
+    background-color: rgb(247, 247, 139);
 }
 .enter:hover{
     background: lightgoldenrodyellow;
@@ -151,6 +157,7 @@
     border: 1px solid grey;
     margin: 3px;
     text-align: center;
+    background-color: rgb(231, 231, 172);
 }
 .ctrl-l:hover,.ctrl-r:hover{
     background: lightgoldenrodyellow;
@@ -161,7 +168,9 @@
     border: 1px solid grey;
     margin: 3px;
     text-align: center;
+    background-color: rgb(245, 245, 157);
 }
 .space:hover{
     background: lightgoldenrodyellow;
+    
 }
