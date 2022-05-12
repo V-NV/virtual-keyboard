@@ -19,7 +19,7 @@
     const En_Ru = document.createElement("p");
     cont.appendChild(En_Ru);
     En_Ru.classList.add('EnRu');
-    En_Ru.innerHTML = 'Не хватает времени, пожалуйста оставьте свой дискорд <br> по нажатию и клику работают только цифры и буквы <br>';
+    En_Ru.innerHTML = 'Переключение языка левый CTRL + ALT <br> Windows <br>';
 
     
 
