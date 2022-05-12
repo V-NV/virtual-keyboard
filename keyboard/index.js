@@ -33,16 +33,11 @@ const keyboardEn3 = [];
 const keyboardEn4 = [];
 
 
-/*document.onkeypress = function (event)  {
-console.log(event);
-keyboard.push(event.charCode);
-console.log(keyboard)
-}*/
 function rukla(){
 let out='', out2='', out3= '', out4= '';
 
 for (let i = 0 ; i< keyboardRu.length;i++){
-    if(keyboardRu[i] == 8){out+='<p class="backspace"">Backspace</p>'} else{
+    if(keyboardRu[i] == 8){out+='<p class="backspace">Backspace</p>'} else{
     out += '<div class="keys" data="'+keyboardRu[i]+'">'+String.fromCharCode(`${keyboardRu[i]}`)+'</div>';
 }};
 for (let i = 0 ; i< keyboardRu2.length;i++){
@@ -65,11 +60,14 @@ rukla();
 
 /***************lighting letters and numbers on click from keyboard*********************/
 document.onkeypress = function (event)  {
+
+    document.querySelector('.textarea').focus();
+
    // document.addEventListener('keydown', (event) => {
    //console.log(event.charCode);
     console.log(event.keyCode);
     
-    document.querySelector('.keys[data="'+ event.keyCode +'"').classList.add('active');
+    document.querySelector('.keys[data="'+ event.charCode +'"').classList.add('active');
      
 
 };
@@ -78,41 +76,36 @@ document.addEventListener('keyup', (event) => {
     
     document.querySelectorAll('.keyboard .keys').forEach(function(element){
         element.classList.remove('active')
-   
+        //event.preventDefault();
 })});
 /***************letters and numbers on mouse click*********************/
 document.onclick = function (event)  {
 
+    document.querySelector('.textarea').focus();
+
 let keys = document.querySelectorAll('.keys');
 let display = document.querySelector('.textarea');
-let clear = document.querySelector('.clear');
+//let clear = document.querySelector('.clear');
 
 for (let key of keys) {
   key.onmousedown = function () {
   display.textContent += key.textContent;
-  //key.classList.add('active');
+  key.classList.add('active');
   }
-}
-}
+};
+document.querySelectorAll('.keys').forEach(function(element){
+    element.classList.remove('active')
+})
 
 
 
 
-
-
+//clear.onclick = function () {
+  //display.textContent = '';
+//};
+};
 
 /*
-key.onmouseup = function () {
-  display.textContent += key.textContent;
-  key.classList.remove('active');}
-
-
-  }
-};
-clear.onclick = function () {
-  display.textContent = '';
-};
-};
 document.addEventListener('onmouseup', (event) => {
     
     document.querySelectorAll('.keyboard .keys').forEach(function(element){
@@ -122,6 +115,41 @@ document.addEventListener('onmouseup', (event) => {
     })})
 
 /********************************lighting-on-mouseclick****************************************/
+//document.addEventListener('keydown', function (event) {
+    /* virtual keyboard animation when using real keyboard */
+    /*document.querySelector('.textarea').focus();
+
+    let keycode = event.code;
+    if (keycode == 'CapsLock') {
+        addCaps();
+    }
+    else if (keycode == 'ShiftLeft' || keycode == 'ShiftRight') {
+        addShift();
+        event.target.addEventListener('keyup', removeShift);
+    } else {
+        if (keycode == 'AltLeft' || keycode == 'AltRight') {
+            event.preventDefault();
+        }
+        if (keycode == 'Tab') {
+            addTab();
+            event.preventDefault();
+        }
+        let keyClass = document.querySelector(`.${keycode}`).classList;
+        if (!keyClass.contains('keys')) {
+            keyClass.add('active');
+        } else {
+            keyClass.add('active');
+        }
+
+        document.addEventListener('keyup', function () {
+            if (keyClass.contains('active')) {
+                keyClass.remove('active');
+            } else {
+                keyClass.remove('active');
+            }
+        });
+    }
+});*/
 
 
 
@@ -129,6 +157,3 @@ document.addEventListener('onmouseup', (event) => {
 
 
 
-//document.onkeypress = function (event2)  {
- //   document.querySelector('#keyboard .keys[data="'+event.keyCode+'"]').classList.remove('active');
-//
